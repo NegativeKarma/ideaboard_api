@@ -7,14 +7,18 @@ end
 
 
 gem 'rails', '~> 5.1.5'
+gem 'jbuilder', '~> 2.5'
 gem 'pg', '>= 0.18', '< 2.0'
 gem 'puma', '~> 3.7'
-gem 'jbuilder', '~> 2.5'
 # gem 'rack-cors'
 
 group :development, :test do
-  gem 'pry'
+  gem 'coveralls', require: false
+  gem 'database_cleaner'
+  gem 'factory_bot_rails'
   gem 'pry-byebug'
+  gem 'rspec-rails'
+  gem 'shoulda-matchers'
 end
 
 group :development do
@@ -22,5 +26,3 @@ group :development do
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
 end
-
-gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
